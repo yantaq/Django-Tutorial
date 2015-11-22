@@ -1,0 +1,21 @@
+<h1>Today Learned</h1>
+{% if entry %}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Date Created</th>
+        <th>Date Modified</th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td>{{ e.title }}</td>
+        <td>{{ e.content }}</td>
+        <td>{{ e.created }}</td>
+        <td>{{ e.modified  }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <p>No entries are avaible.</p>
+{% endif %}
