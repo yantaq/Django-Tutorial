@@ -1,0 +1,20 @@
+<h1>Today Learned</h1>
+{% if entry %}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Date Created</th>
+        <th>Date Modified</th>
+    </tr>
+    <tr>
+        <td>{{ entry.title }}</td>
+        <td>{{ entry.content }}</td>
+        <td>{{ entry.created }}</td>
+        <td>{{ entry.modified  }}</td>
+    </tr>
+</table>
+{% else %}
+    <p>No entries are avaible.</p>
+{% endif %}
+<a href={% url 'todaylearned:index' %} >Return to Home</a>

@@ -1,21 +1,9 @@
-<h1>Today Learned</h1>
 {% if entry %}
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Date Created</th>
-        <th>Date Modified</th>
-    </tr>
+    <ul>
     {% for e in entry %}
-    <tr>
-        <td>{{ e.title }}</td>
-        <td>{{ e.content }}</td>
-        <td>{{ e.created }}</td>
-        <td>{{ e.modified  }}</td>
-    </tr>
+    <li><a href="{% url 'todaylearned:details' e.id %}">{{ e.title }}</a><span>{{ e.modified }}</span></li>
     {% endfor %}
-</table>
+    </ul>
 {% else %}
-    <p>No entries are avaible.</p>
+    <p>No entries are available.</p>
 {% endif %}
