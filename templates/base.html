@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title> Django Tutorial | {% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <div id="nav">
+	    <a href="/">home</a> |
+	    <a href="/entry"> todaylearned</a> |
+	    <a href="/polls"> poll</a>
+	</div>
+        <h1> {% block head %} {% endblock %}</h1>
+	{% block content %} {% endblock %}
+    </body>
+</html>

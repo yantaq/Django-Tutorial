@@ -1,4 +1,8 @@
-<h1>{{ question.question_text }}</h1>
+{% extends "base.html" %}
+{% block title %} Polls {% endblock %}
+{% block head %} Polls {% endblock %}
+{% block content %}
+<h3>{{ question.question_text }}</h3>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -10,4 +14,5 @@
 {% endfor %}
     <input type="submit" value="Vote" />
 </form>
-<a href="/polls/">Return Home</a>
+{% endblock %}
+

@@ -1,4 +1,7 @@
-<h1>Today Learned</h1>
+{% extends "base.html" %}
+{% block title %} Today Learned {% endblock %}
+{% block head %} Today Learned {% endblock %}
+{% block content %}
 {% if entry %}
 <table>
     <tr>
@@ -17,4 +20,4 @@
 {% else %}
     <p>No entries are avaible.</p>
 {% endif %}
-<a href={% url 'todaylearned:index' %} >Return to Home</a>
+{% endblock %}

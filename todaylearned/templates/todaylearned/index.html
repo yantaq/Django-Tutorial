@@ -1,9 +1,14 @@
-{% if entry %}
+{% extends "base.html" %}
+{% block title %} Today Learned {% endblock %}
+{% block head %} Today Learned {% endblock %}
+{% block content %}
+  {% if entry %}
     <ul>
     {% for e in entry %}
     <li><a href="{% url 'todaylearned:details' e.id %}">{{ e.title }}</a><span>{{ e.modified }}</span></li>
     {% endfor %}
     </ul>
-{% else %}
+  {% else %}
     <p>No entries are available.</p>
-{% endif %}
+  {% endif %}
+{% endblock %}

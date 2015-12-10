@@ -1,9 +1,14 @@
-{% if latest_question_list %}
+{% extends "base.html" %}
+{% block title %} Polls {% endblock %}
+{% block head %} Polls {% endblock %}
+{% block content %}
+  {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
-{% else %}
+  {% else %}
     <p>No polls are available.</p>
-{% endif %}
+  {% endif %}
+{% endblock %}
