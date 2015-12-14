@@ -2,6 +2,14 @@
     float: right;
 }
 
+#titlecontainer {
+    width: 50%;
+}
+
+span {
+    float: right;
+}
+
 li a {
     color: green;
 }
