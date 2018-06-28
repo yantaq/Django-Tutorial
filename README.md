@@ -4,3 +4,4 @@ Remote change 1
 Chagne from branch dt
 Chagne from branch newBra
 Chagne from branch newBra locally
+Change from branch newBra remotely
